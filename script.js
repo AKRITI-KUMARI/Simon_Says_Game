@@ -67,6 +67,8 @@ function checkAns(idx){
 }
 
 function btnPress(){
+  if (!started) return;
+  
   let btn = this;
   userFlash(btn);
 
@@ -94,4 +96,5 @@ function reset(){
   startBtn.innerText = "Restart";
   startBtn.classList.remove("hidden");
 }
+
 
