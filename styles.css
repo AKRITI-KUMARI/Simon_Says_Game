@@ -17,8 +17,10 @@ body {
 }
 
 .btn {
-  height: 180px;
-  width: 180px;
+  height: 40vw;
+  width: 40vw;
+  max-height: 150px;
+  max-width: 150px;
   margin: 2rem;
   border-radius: 20%;
   border: 5px solid black;
@@ -50,4 +52,16 @@ body {
 
 .hidden {
   display: none;
+}
+
+
+@media (max-width: 480px) {
+  .btn {
+    height: 35vw;
+    width: 35vw;
+  }
+
+  h2 {
+    font-size: 7vw;
+  }
 }
