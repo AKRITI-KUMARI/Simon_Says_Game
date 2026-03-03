@@ -5,12 +5,15 @@ let userSeq = [];
 let started = false;
 let level = 0;
 
+let startBtn = document.querySelector(".start");
 let h2 = document.querySelector("h2");
 let maxScore = 0;
 
-document.addEventListener("keypress", function(){
+
+startBtn.addEventListener("click", function(){
   if (started == false){
     started = true;
+    startBtn.classList.add("hidden");
     levelUp();
   }
 });
@@ -53,7 +56,7 @@ function checkAns(idx){
     }
   }
   else{
-    h2.innerHTML = `Game Over! Your current score is "<b>${level}</b>" <br>Press any key to start again`;
+    h2.innerHTML = `Game Over! Your current score is "<b>${level}</b>"`;
     document.querySelector("body").style.backgroundColor = "red";
     setTimeout(() => {
       document.querySelector("body").style.backgroundColor = "white";
@@ -88,5 +91,7 @@ function reset(){
   gameSeq = [];
   userSeq = [];
   level = 0;
+  startBtn.innerText = "Restart";
+  startBtn.classList.remove("hidden");
 }
 

@@ -2,6 +2,15 @@ body {
   text-align: center;
 }
 
+.start {
+  width: 70px;
+  padding: 10px;
+  background-color: black;
+  border: none;
+  border-radius: 20px;
+  color: white;
+}
+
 .btn-container {
   display: flex;
   justify-content: center;
@@ -39,3 +48,6 @@ body {
   background-color: green;
 }
 
+.hidden {
+  display: none;
+}
